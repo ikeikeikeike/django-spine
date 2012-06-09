@@ -1,0 +1,18 @@
+<h1>Edit {{ class_name.title }}</h1>
+
+<a data-type="back">Back</a>
+
+<form>
+  {% for field in fields %}
+  <label>
+    <span>{{ field.title }}</span>
+    <input
+      type="text" name="{{ field }}"
+      value="<%= @{{ field }} %>" required
+      {% if forloop.first %} autofocus{% endif %}>
+    <br />
+  </label>
+  {% endfor %}
+  <button>Edit</button>
+
+</form>

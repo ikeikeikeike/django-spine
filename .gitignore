@@ -1,0 +1,72 @@
+*.hi
+*.o
+*.aux
+*.bbl
+*.blg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.pdfsync
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+\#*\#
+*.swp
+*.tmp
+
+##### vim
+*.orig
+
+##### python
+*.pyc
+*.pyo
+
+##### java
+*.class
+
+##### osx
+.DS_Store
+
+##### GAE
+.gaedata
+
+##### SCM subversion
+*.svn
+*.svn-base
+
+##### SCM git
+*.git
+
+##### SCM mercurial
+*.hg
+
+##### IDE jetbrains
+.idea
+*.iml
+
+##### TAG
+tags
+TAGS
+
+##### Makefile
+src
+
+##### setup.py
+build
+dist
+django_pudebug.egg-info
+
+##### scala
+lib/vetags/lang/scala/sources
+
+#### clojure
+lib/vetags/lang/clojure/helloworld
