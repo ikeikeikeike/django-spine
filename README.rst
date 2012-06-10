@@ -1,4 +1,4 @@
-``spine for django``
+``Spine plugin for Django``
 
 Description
 ===========

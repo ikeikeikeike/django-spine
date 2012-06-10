@@ -1,0 +1,12 @@
+<h1>Listing Examples</h1>
+
+<% for example in @examples: %>
+  <div class="item" data-id="<%= example.id %>">
+    <a data-type="show"><%= example.name %></a>
+
+    <a data-type="edit">Edit</a>
+    <a data-type="destroy">Destroy</a>
+  </div>
+<% end %>
+
+<p><a data-type="new">New Example</a></p>

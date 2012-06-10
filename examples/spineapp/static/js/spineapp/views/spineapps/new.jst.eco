@@ -1,0 +1,36 @@
+<h1>New Example</h1>
+
+<a data-type="back">Back</a>
+
+<form>
+  
+  <label>
+    <span>Name</span>
+    <input
+      type="text" name="name"
+      value="<%= @name %>" required
+       autofocus>
+    <br />
+  </label>
+  
+  <label>
+    <span>Content</span>
+    <input
+      type="text" name="content"
+      value="<%= @content %>" required
+      >
+    <br />
+  </label>
+  
+  <label>
+    <span>Message</span>
+    <input
+      type="text" name="message"
+      value="<%= @message %>" required
+      >
+    <br />
+  </label>
+  
+  <button>Create</button>
+
+</form>

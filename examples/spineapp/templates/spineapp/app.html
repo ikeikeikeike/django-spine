@@ -1,0 +1,15 @@
+{% load compress %}{% load subcommand_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Spine App{% endblock %}</title>
+    <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    {% compress js %}
+      {# javascript/coffeescript #}{# less/css #}
+      {% generate spine spineapp %}
+    {% endcompress %}
+  </head>
+  <body>
+    <h1>Spine App</h1>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<h1>Show Example</h1>
+
+<a data-type="edit">Edit</a> <a data-type="back">Back</a>
+
+
+<p>Name: <%= @name %></p>
+
+<p>Content: <%= @content %></p>
+
+<p>Message: <%= @message %></p>

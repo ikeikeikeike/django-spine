@@ -1,10 +1,41 @@
 import os
 from setuptools import setup
 
-version = '0.1'
+version = '0.0.1'
 name = 'django-spine'
 short_description = ''
 long_description = """\
+``Spine plugin for Django``
+
+Description
+===========
+
+Requirements
+============
+* django
+* django-subcommand
+
+Features
+========
+
+
+Setup
+=====
+
+
+Installation
+~~~~~~~~~~~~
+
+
+History
+========
+0.x (2012-xx-xx)
+~~~~~~~~~~~~~~~~
+* first release
+
+License
+=======
+MIT License
 
 """
 
@@ -43,7 +74,7 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
 
 classifiers = [
    "Development Status :: 3 - Alpha",
-   "Development Status :: 4 - Beta",
+#   "Development Status :: 4 - Beta",
    "Framework :: Django",
    "Environment :: Web Environment",
    "Intended Audience :: Developers",

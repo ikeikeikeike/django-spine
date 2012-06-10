@@ -70,3 +70,5 @@ lib/vetags/lang/scala/sources
 
 #### clojure
 lib/vetags/lang/clojure/helloworld
+
+django_spine.egg-info
