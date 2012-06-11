@@ -22,9 +22,20 @@ Features
 Setup
 =====
 
+::
+
+    $ pip install django-spine
+
 
 Installation
 ~~~~~~~~~~~~
+
+edit settings.py ::
+
+    INSTALLED_APPS = (
+        "subcommand",
+        "spine",
+    )
 
 
 History

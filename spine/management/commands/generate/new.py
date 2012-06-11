@@ -1,6 +1,5 @@
 import os
 from django.core.management.base import CommandError
-from django.contrib.staticfiles import finders
 from subcommand.management.generate import GenerateSubCommand
 
 class Command(GenerateSubCommand):
@@ -11,7 +10,7 @@ class Command(GenerateSubCommand):
         if not os.path.exists(os.path.join(self.app_dir, "static", "js")):
             raise CommandError(
                 "Please run the below for generate static (script) root.\n\n"
-                "    $ mkdir -p {0}/static/js\n".format(finders.find(self.app_name)))
+                "    $ mkdir -p {0}/static/js\n".format(self.app_dir))
 
         src = os.path.join(self.app_dir, "static", "js", self.app_name)
 
