@@ -3,7 +3,7 @@ from setuptools import setup
 
 version = '0.0.1'
 name = 'django-spine'
-short_description = ''
+short_description = 'Spine plugin for Django'
 long_description = """\
 ``Spine plugin for Django``
 
