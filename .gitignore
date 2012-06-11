@@ -71,4 +71,8 @@ lib/vetags/lang/scala/sources
 #### clojure
 lib/vetags/lang/clojure/helloworld
 
+#### test pypi
 django_spine.egg-info
+.tox
+.coverage
+junit-py*

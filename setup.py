@@ -1,5 +1,7 @@
 import os
 from setuptools import setup
+from setuptools.command.test import test
+
 
 version = '0.0.1'
 name = 'django-spine'
@@ -35,7 +37,6 @@ edit settings.py ::
     INSTALLED_APPS = (
         "subcommand",
         "spine",
-        'compressor',
     )
 
 
@@ -84,23 +85,32 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
         data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
 
 
-classifiers = [
-   "Development Status :: 3 - Alpha",
-#   "Development Status :: 4 - Beta",
-   "Framework :: Django",
-   "Environment :: Web Environment",
-   "Intended Audience :: Developers",
-   "Programming Language :: Python",
-   'Topic :: Utilities',
-   'License :: OSI Approved :: MIT License',
-]
+class pytest_test(test):
+    def finalize_options(self):
+        test.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest
+        pytest.main([])
+
 
 setup(
     name=name,
     version=version,
     description=short_description,
     long_description=long_description,
-    classifiers=classifiers,
+    classifiers=[
+       "Development Status :: 3 - Alpha",
+    #   "Development Status :: 4 - Beta",
+       "Framework :: Django",
+       "Environment :: Web Environment",
+       "Intended Audience :: Developers",
+       "Programming Language :: Python",
+       'Topic :: Utilities',
+       'License :: OSI Approved :: MIT License',
+    ],
     keywords=['javascript', 'coffeescript', 'django', 'spine'],
     author='Tatsuo Ikeda',
     author_email='jp.ne.co.jp at gmail',
@@ -109,5 +119,7 @@ setup(
     packages=packages,
     data_files=data_files,
     py_modules=['spine'],
-    install_requires=['django', 'django-subcommand']
+    install_requires=['django', 'django-subcommand'],
+    cmdclass={'test': pytest_test},
+    tests_require=['pytest'],
 )
