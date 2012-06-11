@@ -6,6 +6,13 @@ class Command(GenerateSubCommand):
 
     help = ("General options: ")
 
+    def usage(self, subcommand):
+        usage = '%prog {0} {1} APP [options] {2}'.format(
+            subcommand, self.usercommand, self.args)
+        if self.help:
+            return '{0}\n\n{1}'.format(usage, self.help)
+        return usage
+
     def handle_generate(self, *args, **options):
         if not os.path.exists(os.path.join(self.app_dir, "static", "js")):
             raise CommandError(

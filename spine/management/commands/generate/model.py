@@ -8,7 +8,7 @@ class Command(GenerateSubCommand):
     help = ("General options: ")
 
     def usage(self, subcommand):
-        usage = '%prog {0} {1} NAME field1 field2 [options] {2}'.format(
+        usage = '%prog {0} {1} APP NAME field1 field2 [options] {2}'.format(
             subcommand, self.usercommand, self.args)
         if self.help:
             return '{0}\n\n{1}'.format(usage, self.help)
