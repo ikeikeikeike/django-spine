@@ -28,6 +28,7 @@ edit settings.py ::
     INSTALLED_APPS = (
         "subcommand",
         "spine",
+        'compressor',
     )
 
 
