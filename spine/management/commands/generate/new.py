@@ -1,20 +1,20 @@
 import os
-from optparse import make_option
+from django.core.management.base import CommandError
+from django.contrib.staticfiles import finders
+from subcommand.management.generate import GenerateSubCommand
 
-# from django.conf import settings
-
-from ...generate import NewCommand
-
-
-class Command(NewCommand):
+class Command(GenerateSubCommand):
 
     help = ("General options: ")
 
-    def handle_new(self, *args, **options):
+    def handle_generate(self, *args, **options):
+        if not os.path.exists(os.path.join(self.app_dir, "static", "js")):
+            raise CommandError(
+                "Please run the below for generate static (script) root.\n\n"
+                "    $ mkdir -p {0}/static/js\n".format(finders.find(self.app_name)))
+
         src = os.path.join(self.app_dir, "static", "js", self.app_name)
 
-        self.empty_directory(os.path.join(self.app_dir, "static"))
-        self.empty_directory(os.path.join(self.app_dir, "static", "js"))
         self.empty_directory(os.path.join(src))
 
         self.empty_directory(os.path.join(src, "models"))
