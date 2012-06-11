@@ -31,6 +31,14 @@ edit settings.py ::
         'compressor',
     )
 
+Run the below for generating spine's project ::
+
+    $ python manage.py generate spine:new app
+
+    and
+
+    $ python manage.py generate spine:scaffold app appclass name message date
+
 
 History
 ========
