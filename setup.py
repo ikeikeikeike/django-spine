@@ -1,6 +1,6 @@
 import os
 from setuptools import setup
-from setuptools.command.test import test
+# from setuptools.command.test import test
 
 
 version = '0.0.1'
@@ -91,15 +91,15 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
         data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
 
 
-class pytest_test(test):
-    def finalize_options(self):
-        test.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
+# class pytest_test(test):
+    # def finalize_options(self):
+        # test.finalize_options(self)
+        # self.test_args = []
+        # self.test_suite = True
 
-    def run_tests(self):
-        import pytest
-        pytest.main([])
+    # def run_tests(self):
+        # import pytest
+        # pytest.main([])
 
 
 setup(
@@ -129,6 +129,6 @@ setup(
     data_files=data_files,
     py_modules=['spine'],
     install_requires=['django', 'django-subcommand'],
-    cmdclass={'test': pytest_test},
-    tests_require=['pytest'],
+    # cmdclass={'test': pytest_test},
+    # tests_require=['pytest'],
 )
