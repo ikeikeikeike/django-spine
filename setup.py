@@ -37,7 +37,14 @@ edit settings.py ::
     INSTALLED_APPS = (
         "subcommand",
         "spine",
+        'compressor',
     )
+
+Run the below for generating spine's project ::
+
+    $ python manage.py generate spine:new app
+
+    $ python manage.py generate spine:scaffold app appclass name message date
 
 
 History
@@ -49,7 +56,6 @@ History
 License
 =======
 MIT License
-
 """
 
 
