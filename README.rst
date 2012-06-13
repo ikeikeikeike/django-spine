@@ -15,6 +15,8 @@ Features
 Setup
 =====
 
+.. highlight:: bash
+
 ::
 
     $ pip install django-spine
@@ -22,6 +24,8 @@ Setup
 
 Installation
 ~~~~~~~~~~~~
+
+.. highlight:: python
 
 edit settings.py ::
 

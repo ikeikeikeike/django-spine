@@ -4,18 +4,33 @@
   <head>
     <title>{% block title %}Spine App{% endblock %}</title>
 
+    {# javascript/coffeescript #}
     {% compress js %}
-      {# javascript/coffeescript #}
-      {% generate spine spineapp %}
+      {% generate spine %}
+      {% generate spineapp ./lib %}
+      {% generate spineapp ./index %}
+      {% generate spineapp ./models %}
+      {% generate spineapp ./controllers %}
+      {% generate spineapp ./views %}
     {% endcompress %}
 
+
+    {# less/css #}
     {#% compress css %#}
-      {# less/css #}
       {#% generate spine spineapp %#}
     {#% endcompress %#}
 
   </head>
   <body>
     <h1>Spine App</h1>
+
+    <div id="spineapp"></div>
+
+    <script type="text/javascript" charset="utf-8">
+        $(function(){
+            new Spineapp({el: $("#spineapp")});
+            console.log(12);
+        });
+    </script>
   </body>
 </html>
