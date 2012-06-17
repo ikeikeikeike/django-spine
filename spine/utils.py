@@ -12,13 +12,32 @@ class LazyJSONEncoder(json.JSONEncoder):
             return list(iterable)
         try:
             from django.db.models.base import ModelBase
-            isinstance(o.__class__,ModelBase)
+            isinstance(o.__class__, ModelBase)
         except Exception:
             pass
         else:
             from django.utils.encoding import force_unicode
             return force_unicode(o)
-        return super(LazyJSONEncoder,self).default(o)
+        return super(LazyJSONEncoder, self).default(o)
+
+
+class LazyJSONDecode(json.JSONDecoder):
+    def default(self,o):
+        try:
+            iterable = iter(o)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        try:
+            from django.db.models.base import ModelBase
+            isinstance(o.__class__, ModelBase)
+        except Exception:
+            pass
+        else:
+            from django.utils.encoding import force_unicode
+            return force_unicode(o)
+        return super(LazyJSONDecode, self).default(o)
 
 
 class JsonResponse(HttpResponse):
