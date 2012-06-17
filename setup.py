@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 # from setuptools.command.test import test
 
 version = '0.0.2'
@@ -73,9 +73,9 @@ setup(
     author_email='jp.ne.co.jp at gmail',
     url='https://github.com/ikeikeikeike/django-spine',
     license='MIT License',
-    packages=packages,
+    packages=find_packages(),
+    include_package_data=True,
     data_files=data_files,
-    py_modules=['spine'],
     install_requires=['django-subcommand', "django-pipeline", "eco", "bpmappers"],
     # cmdclass={'test': pytest_test},
     # tests_require=['pytest'],
