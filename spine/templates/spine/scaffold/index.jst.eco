@@ -1,0 +1,12 @@
+<h1>Listing {{ class_name.pluralize.title }}</h1>
+
+<% for {{ class_name }} in @{{ class_name.pluralize }}: %>
+  <div class="item" data-id="<%= {{ class_name }}.id %>">
+    <a data-type="show"><%= {{ class_name }}.{{ fields.0 }} %></a>
+
+    <a data-type="edit">Edit</a>
+    <a data-type="destroy">Destroy</a>
+  </div>
+<% end %>
+
+<p><a data-type="new">New {{ class_name.title }}</a></p>

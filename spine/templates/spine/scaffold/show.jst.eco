@@ -1,0 +1,7 @@
+<h1>Show {{ class_name.title }}</h1>
+
+<a data-type="edit">Edit</a> <a data-type="back">Back</a>
+
+{% for field in fields %}
+<p>{{ field.title }}: <%= @{{ field }} %></p>
+{% endfor %}
