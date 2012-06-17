@@ -1,0 +1,4 @@
+include tox.ini
+include LICENSE
+recursive-include tests
+recursive-include examples
