@@ -54,7 +54,10 @@ Run the below for generating spine's project ::
     $ python manage.py generate spine:scaffold app appclass name message date
 
 
-For more information, please see the `Example. <https://github.com/ikeikeikeike/django-spine/tree/master/examples>`_
+Examples
+=========
+
+**For more information, please see the** `Example. <https://github.com/ikeikeikeike/django-spine/tree/master/examples>`_
 
 
 Setup
