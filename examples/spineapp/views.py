@@ -8,6 +8,7 @@ from subcommand.utils import JsonResponse
 
 
 def index(request):
+
     if request.is_ajax():
         return JsonResponse(map(lambda obj: ExampleMapper(obj).as_dict(), Example.objects.all()))
     else:

@@ -31,9 +31,9 @@ class Command(GenerateSubCommand):
             "{0}.{1}".format(class_plualize, "coffee")))
 
         self.empty_directory(os.path.join(src, "views", class_plualize))
-        self.template("scaffold/edit.jst", os.path.join(src, "views", class_plualize, "edit.jst.eco"))
-        self.template("scaffold/index.jst", os.path.join(src, "views", class_plualize, "index.jst.eco"))
-        self.template("scaffold/new.jst", os.path.join(src, "views", class_plualize, "new.jst.eco"))
-        self.template("scaffold/show.jst", os.path.join(src, "views", class_plualize, "show.jst.eco"))
+        self.template("scaffold/edit.jst.eco", os.path.join(src, "views", class_plualize, "edit.jst.eco"))
+        self.template("scaffold/index.jst.eco", os.path.join(src, "views", class_plualize, "index.jst.eco"))
+        self.template("scaffold/new.jst.eco", os.path.join(src, "views", class_plualize, "new.jst.eco"))
+        self.template("scaffold/show.jst.eco", os.path.join(src, "views", class_plualize, "show.jst.eco"))
 
         self.run()
