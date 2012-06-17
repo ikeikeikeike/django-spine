@@ -4,7 +4,7 @@ from .models import (
     Example,
     ExampleMapper
 )
-from subcommand.utils import JsonResponse
+from spine.utils import JsonResponse
 
 
 def index(request):
