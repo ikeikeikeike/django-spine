@@ -76,3 +76,5 @@ django_spine.egg-info
 .tox
 .coverage
 junit-py*
+
+examples/spineapp/templates/spineapp/app.bak.html

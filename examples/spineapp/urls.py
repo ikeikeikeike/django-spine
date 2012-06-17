@@ -7,5 +7,6 @@ from django.conf.urls import (
 import views
 
 urlpatterns = patterns('',
-    url(r"", views.app, name="spineapp_app"),
+    url(r"^examples", views.index, name="spineapp_index"),
+#    url(r"", views.index, name="spineapp_index"),
 )

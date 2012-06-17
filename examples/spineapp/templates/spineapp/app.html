@@ -1,24 +1,10 @@
-{% load compress %}{% load subcommand_tags %}
+{% load compressed %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block title %}Spine App{% endblock %}</title>
 
-    {# javascript/coffeescript #}
-    {% compress js %}
-      {% generate spine %}
-      {% generate spineapp ./lib %}
-      {% generate spineapp ./index %}
-      {% generate spineapp ./models %}
-      {% generate spineapp ./controllers %}
-      {% generate spineapp ./views %}
-    {% endcompress %}
-
-
-    {# less/css #}
-    {#% compress css %#}
-      {#% generate spine spineapp %#}
-    {#% endcompress %#}
+    {% compressed_js 'application' %}
 
   </head>
   <body>

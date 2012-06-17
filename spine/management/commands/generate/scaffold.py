@@ -22,17 +22,18 @@ class Command(GenerateSubCommand):
             raise CommandError(
                 "Please run the `{0}:new` command before this command.".format(self.package))
 
+        class_plualize = self.inflect.pluralize(self.class_name)
+
         self.template("model/model.coffee", os.path.join(
             src, "models", "{0}.{1}".format(self.class_name, "coffee")))
         self.template("scaffold/controller.coffee", os.path.join(
             src, "controllers",
-            "{0}.{1}".format(self.inflect.pluralize(self.class_name), "coffee")))
+            "{0}.{1}".format(class_plualize, "coffee")))
 
-        pluralize = self.inflect.pluralize(self.app_name)
-        self.empty_directory(os.path.join(src, "views", pluralize))
-        self.template("scaffold/edit.jst", os.path.join(src, "views", pluralize, "edit.jst.eco"))
-        self.template("scaffold/index.jst", os.path.join(src, "views", pluralize, "index.jst.eco"))
-        self.template("scaffold/new.jst", os.path.join(src, "views", pluralize, "new.jst.eco"))
-        self.template("scaffold/show.jst", os.path.join(src, "views", pluralize, "show.jst.eco"))
+        self.empty_directory(os.path.join(src, "views", class_plualize))
+        self.template("scaffold/edit.jst", os.path.join(src, "views", class_plualize, "edit.jst.eco"))
+        self.template("scaffold/index.jst", os.path.join(src, "views", class_plualize, "index.jst.eco"))
+        self.template("scaffold/new.jst", os.path.join(src, "views", class_plualize, "new.jst.eco"))
+        self.template("scaffold/show.jst", os.path.join(src, "views", class_plualize, "show.jst.eco"))
 
         self.run()
