@@ -76,7 +76,7 @@ setup(
     packages=packages,
     data_files=data_files,
     py_modules=['spine'],
-    install_requires=['django-subcommand', "django-pipeline", "eco"],
+    install_requires=['django-subcommand', "django-pipeline", "eco", "bpmappers"],
     # cmdclass={'test': pytest_test},
     # tests_require=['pytest'],
 )

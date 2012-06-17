@@ -1,6 +1,7 @@
-import eco
 import os
+import eco
 from pipeline.compilers import CompilerBase
+
 
 class EcoCompiler(CompilerBase):
     output_extension = 'js'
