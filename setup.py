@@ -7,6 +7,7 @@ name = 'django-spine'
 short_description = 'Spine plugin for Django'
 long_description = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
+
 def fullsplit(path, result=None):
     """
     Split a pathname into components (the opposite of os.path.join) in a
@@ -59,7 +60,7 @@ setup(
        "Development Status :: 3 - Alpha",
     #   "Development Status :: 4 - Beta",
        "Framework :: Django",
-       'Environment :: Console'
+       'Environment :: Console',
        "Environment :: Web Environment",
        "Intended Audience :: Developers",
        'License :: OSI Approved :: MIT License',
