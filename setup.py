@@ -40,17 +40,6 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
         data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
 
 
-# class pytest_test(test):
-    # def finalize_options(self):
-        # test.finalize_options(self)
-        # self.test_args = []
-        # self.test_suite = True
-
-    # def run_tests(self):
-        # import pytest
-        # pytest.main([])
-
-
 setup(
     name=name,
     version=version,

@@ -1,5 +1,7 @@
 include tox.ini
 include LICENSE
+include README.rst
+include HISTORY.rst
 recursive-include tests *
 recursive-include examples *
 recursive-include spine *
