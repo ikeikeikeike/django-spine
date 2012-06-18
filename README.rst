@@ -21,7 +21,7 @@ edit settings.py ::
         "your_app" #
     )
 
-    # set static project directory for your app.
+    # set static directory for your app.
     PIPELINE_JS = {
         'application': {
             'source_filenames': (
