@@ -8,12 +8,12 @@ from django.views.decorators.http import (
 from spine.utils import (
     JsonResponse,
     json,
-    LazyJSONDecode
 )
 from .models import (
     Example,
     ExampleMapper
 )
+
 
 def index(request):
     if request.method == 'GET':
@@ -22,7 +22,7 @@ def index(request):
         else:
             return render_to_response("spineapp/app.html", RequestContext(request, {}))
     try:
-        data = json.loads(tuple(request.POST.dict())[0], cls=LazyJSONDecode)
+        data = json.loads(tuple(request.POST.dict())[0])
         data.pop("id")
         post = Example(**data)
         post.save()
