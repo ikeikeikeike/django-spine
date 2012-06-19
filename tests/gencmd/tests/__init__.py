@@ -1,5 +1,6 @@
-# import warnings
-# warnings.simplefilter('ignore', Warning)
+import warnings
+warnings.simplefilter('ignore', Warning)
+
 
 from gencmd.tests.new import *
 from gencmd.tests.controller import *

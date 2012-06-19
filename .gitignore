@@ -57,13 +57,10 @@
 tags
 TAGS
 
-##### Makefile
-src
-
 ##### setup.py
 build
 dist
-django_pudebug.egg-info
+django_spine.egg-info
 
 ##### scala
 lib/vetags/lang/scala/sources
@@ -71,10 +68,12 @@ lib/vetags/lang/scala/sources
 #### clojure
 lib/vetags/lang/clojure/helloworld
 
-#### test pypi
-django_spine.egg-info
+#### test
 .tox
 .coverage
 junit-py*
 
-examples/spineapp/templates/spineapp/app.bak.html
+#########
+
+examples/django_spine/set.sh
+examples/django_spine/unset.sh

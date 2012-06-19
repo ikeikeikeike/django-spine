@@ -4,15 +4,34 @@ from .base import TestSpineBase
 
 class TestSpineModel(TestSpineBase):
 
+    def setUp(self):
+        super(TestSpineModel, self).setUp()
+        self.new_setUp()
+
+    def tearDown(self):
+        super(TestSpineModel, self).tearDown()
+        self.new_tearDown()
+
     def test_exit(self):
         command = model.Command()
         self.assertRaises(
             SystemExit,
             command.execute,
             "ExceptionTest",
-            stdout=self.stdout,
-            stderr=self.stderr
+#            stdout=self.stdout,
+#            stderr=self.stderr
         )
+
+    def test_model(self):
+        command = model.Command()
+        self.assertRaises(
+            SystemExit,
+            command.execute,
+            "gencmd", "classname",
+#            stdout=self.stdout,
+#            stderr=self.stderr
+        )
+
 
 
 # vim: set et fenc=utf-8 ft=python ff=unix sts=4 sw=4 ts=4 :
