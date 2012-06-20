@@ -6,7 +6,7 @@ Django Spine
 
 
 Installation
-~~~~~~~~~~~~
+=============
 
 edit settings.py
 
@@ -48,7 +48,7 @@ edit settings.py
 
 Run the below for generating spine's project
 
-```shell
+```bash
     $ python manage.py generate spine:new your_app
     $ python manage.py generate spine:scaffold your_app example name content message
 ```
