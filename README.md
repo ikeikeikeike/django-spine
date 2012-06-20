@@ -9,6 +9,7 @@ Installation
 ~~~~~~~~~~~~
 
 edit settings.py
+
 ```python
     # set (subcommand, spine, pipeline) package.
     INSTALLED_APPS = (
@@ -46,6 +47,7 @@ edit settings.py
 ```
 
 Run the below for generating spine's project
+
 ```shell
     $ python manage.py generate spine:new your_app
     $ python manage.py generate spine:scaffold your_app example name content message
