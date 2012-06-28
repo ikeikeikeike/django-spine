@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Django-spine by ikeikeikeike</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/ikeikeikeike/django-spine">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/ikeikeikeike/django-spine/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/ikeikeikeike/django-spine/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Django-spine</h1>
+          <p>Spine plugin for Django</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/ikeikeikeike">ikeikeikeike</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>Django Spine</h1>
+
+<p><a href="https://github.com/maccman/spine">Spine</a> plugin for Django</p>
+
+<h1>Installation</h1>
+
+<p>edit settings.py</p>
+
+<div class="highlight">
+<pre><span class="c"># set (subcommand, spine, pipeline) package.</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c"># external</span>
+    <span class="s">"subcommand"</span><span class="p">,</span>
+    <span class="s">"spine"</span><span class="p">,</span>
+    <span class="s">'pipeline'</span><span class="p">,</span>
+
+    <span class="c"># applications</span>
+    <span class="s">"your_app"</span> <span class="c">#</span>
+<span class="p">)</span>
+
+<span class="c"># set static directory for your app.</span>
+<span class="n">PIPELINE_JS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'application'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'source_filenames'</span><span class="p">:</span> <span class="p">(</span>
+            <span class="s">'js/*.js'</span><span class="p">,</span>
+            <span class="s">'js/spine/*.js'</span><span class="p">,</span>
+            <span class="s">'js/spine/**/*.js'</span><span class="p">,</span>
+            <span class="s">'js/your_app/lib/*.coffee'</span><span class="p">,</span>
+            <span class="s">'js/your_app/*.coffee'</span><span class="p">,</span>
+            <span class="s">'js/your_app/models/*.coffee'</span><span class="p">,</span>
+            <span class="s">'js/your_app/controllers/*.coffee'</span><span class="p">,</span>
+            <span class="s">'js/your_app/views/**/*.eco'</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="s">'output_filename'</span><span class="p">:</span> <span class="s">'js/application.r?.js'</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c"># set Eco Compiler</span>
+<span class="n">PIPELINE_COMPILERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">'pipeline.compilers.coffee.CoffeeScriptCompiler'</span><span class="p">,</span>
+    <span class="s">'spine.compiler.EcoCompiler'</span><span class="p">,</span>  <span class="c"># this compiler.</span>
+<span class="p">)</span>
+</pre>
+</div>
+
+
+<p>Run the below for generating spine's project</p>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>python manage.py generate spine:new your_app
+<span class="nv">$ </span>python manage.py generate spine:scaffold your_app example name content message
+</pre>
+</div>
+
+
+<h1>Examples</h1>
+
+<p>For more information, please see the <a href="https://github.com/ikeikeikeike/django-spine/tree/master/examples">Example</a></p>
+
+<h1>Setup</h1>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>pip install django-spine
+</pre>
+</div>
+
+
+<h1>License</h1>
+
+<p>MIT License</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
