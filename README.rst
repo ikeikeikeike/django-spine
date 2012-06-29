@@ -71,6 +71,12 @@ Setup
     $ pip install django-spine
 
 
+Documentation
+==============
+
+`django-spine.readthedocs.org <http://django-spine.readthedocs.org>`_
+
+
 License
 =======
 MIT License
