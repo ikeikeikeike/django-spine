@@ -8,7 +8,7 @@ Django Spine
 Installation
 =============
 
-edit settings.py
+Edit settings.py
 
 ```python
 # set (subcommand, spine, pipeline) package.
@@ -46,11 +46,18 @@ PIPELINE_COMPILERS = (
 )
 ```
 
-Run the below for generating spine's project
+Run the below for generating spine's project.
 
 ```bash
 $ python manage.py generate spine:new your_app
 $ python manage.py generate spine:scaffold your_app example name content message
+```
+
+Or allows removing.
+
+```bash
+$ python manage.py destroy spine:scaffold your_app example name content
+$ python manage.py destroy spine:new your_app
 ```
 
 Examples

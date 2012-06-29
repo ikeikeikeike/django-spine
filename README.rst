@@ -45,10 +45,16 @@ edit settings.py ::
     )
 
 
-Run the below for generating spine's project ::
+Run the below for generating spine's project. ::
 
     $ python manage.py generate spine:new your_app
     $ python manage.py generate spine:scaffold your_app example name content message
+
+
+Or allows removing. ::
+
+    $ python manage.py destroy spine:scaffold your_app example name content
+    $ python manage.py destroy spine:new your_app
 
 
 Examples
