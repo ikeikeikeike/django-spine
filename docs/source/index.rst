@@ -13,6 +13,13 @@ Contents:
 
    usage
 
+Change History:
+
+.. toctree::
+   :maxdepth: 5
+
+   HISTORY
+
 
 Indices and tables
 ==================
