@@ -1,7 +1,11 @@
 include tox.ini
 include LICENSE
 include README.rst
+include README-ja.rst
+include README.md
 include HISTORY.rst
-recursive-include tests *
-recursive-include examples *
-recursive-include spine *
+graft tests
+graft examples
+graft docs
+graft spine/static
+graft spine/templates

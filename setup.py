@@ -1,8 +1,13 @@
+# import sys
 import os
-from setuptools import setup, find_packages
-# from setuptools.command.test import test
+from distutils.sysconfig import get_python_lib
+from setuptools import (
+#    find_packages,
+    setup
+)
 
-version = '0.0.2'
+
+version = '0.3.2'
 name = 'django-spine'
 short_description = 'Spine plugin for Django'
 long_description = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
@@ -28,6 +33,7 @@ root_dir = os.path.dirname(__file__)
 if root_dir != '':
     os.chdir(root_dir)
 extensions_dir = 'spine'
+data_dir = get_python_lib()
 
 for dirpath, dirnames, filenames in os.walk(extensions_dir):
     # Ignore dirnames that start with '.'
@@ -36,8 +42,8 @@ for dirpath, dirnames, filenames in os.walk(extensions_dir):
             del dirnames[i]
     if '__init__.py' in filenames:
         packages.append('.'.join(fullsplit(dirpath)))
-    elif filenames:
-        data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
+    else:
+        data_files.append([os.path.join(data_dir, dirpath), [os.path.join(dirpath, f) for f in filenames]])
 
 
 setup(
@@ -46,8 +52,8 @@ setup(
     description=short_description,
     long_description=long_description,
     classifiers=[
-       "Development Status :: 3 - Alpha",
-    #   "Development Status :: 4 - Beta",
+       # "Development Status :: 3 - Alpha",
+       "Development Status :: 4 - Beta",
        "Framework :: Django",
        'Environment :: Console',
        "Environment :: Web Environment",
@@ -63,8 +69,9 @@ setup(
     author_email='jp.ne.co.jp at gmail',
     url='https://github.com/ikeikeikeike/django-spine',
     license='MIT License',
-    packages=find_packages(),
-    include_package_data=True,
+#    packages=find_packages(),
+#    include_package_data=True,
+    packages=packages,
     data_files=data_files,
     install_requires=['django-subcommand', "django-pipeline", "eco", "bpmappers"],
     # cmdclass={'test': pytest_test},

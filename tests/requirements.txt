@@ -1,6 +1,0 @@
-django-subcommand
-django-pudebug
-django-nose
-nose-pudb
-pudb
-debug

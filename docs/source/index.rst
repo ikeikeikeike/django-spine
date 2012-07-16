@@ -12,8 +12,6 @@ Contents:
    :maxdepth: 5
 
    usage
-   template
-
 
 
 Indices and tables

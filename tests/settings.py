@@ -1,5 +1,5 @@
 ADMINS = (
-    ('test@example.com', 'Test yada'),
+    ('test@example.com', 'Test da'),
 )
 
 DEBUG = True
@@ -21,10 +21,10 @@ DATABASES = {
 SECRET_KEY = '7r33b34rd'
 
 INSTALLED_APPS = [
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.admin',
+#    'django.contrib.auth',
+#    'django.contrib.contenttypes',
+#    'django.contrib.sessions',
+#    'django.contrib.admin',
     'subcommand',
     'spine',
 ]
