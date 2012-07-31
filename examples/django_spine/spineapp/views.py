@@ -22,8 +22,7 @@ def index(request):
         else:
             return render_to_response("spineapp/app.html", RequestContext(request, {}))
     try:
-        data = json.loads(tuple(request.POST.dict())[0])
-        # data = json.loads(request.raw_post_data)
+        data = json.loads(request.body)
         data.pop("id")
         post = Example(**data)
         post.save()

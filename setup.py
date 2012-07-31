@@ -7,7 +7,7 @@ from setuptools import (
 )
 
 
-version = '0.3.2'
+version = '0.3.3'
 name = 'django-spine'
 short_description = 'Spine plugin for Django'
 long_description = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
@@ -73,7 +73,7 @@ setup(
 #    include_package_data=True,
     packages=packages,
     data_files=data_files,
-        install_requires=['django-subcommand', "django-pipeline==1.2.10", "eco", "bpmappers"],
+    install_requires=['django-subcommand', "django-pipeline<=1.2.14", "eco", "bpmappers"],
     # cmdclass={'test': pytest_test},
     # tests_require=['pytest'],
 )
