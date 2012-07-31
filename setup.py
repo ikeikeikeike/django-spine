@@ -73,7 +73,7 @@ setup(
 #    include_package_data=True,
     packages=packages,
     data_files=data_files,
-    install_requires=['django-subcommand', "django-pipeline", "eco", "bpmappers"],
+        install_requires=['django-subcommand', "django-pipeline==1.2.10", "eco", "bpmappers"],
     # cmdclass={'test': pytest_test},
     # tests_require=['pytest'],
 )
