@@ -1,0 +1,9 @@
+language: python
+env:
+  - TOXENV=py26-1.4
+  - TOXENV=py27-1.4
+  - TOXENV=py26-1.2
+  - TOXENV=py27-1.2
+install:
+  - pip install --use-mirrors tox
+script: tox
